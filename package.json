@@ -1,0 +1,23 @@
+{
+  "name": "utils",
+  "version": "0.0.0",
+  "description": "justerest utils",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^22.0.6"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justerest/utils.git"
+  },
+  "author": "justerest",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justerest/utils/issues"
+  },
+  "homepage": "https://github.com/justerest/utils#readme"
+}

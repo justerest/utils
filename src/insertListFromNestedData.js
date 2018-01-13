@@ -1,8 +1,9 @@
 /**
- * @param  {[object]} data [description]
+ * @param  {Object[]} data [description]
  * @param  {Element} node [description]
  *
  * @example
+ *
  * const categories = [{
  *     title: "Одежда",
  *     left: 1,
@@ -48,9 +49,11 @@
  *     left: 14,
  *     right: 15
  *   }];
+ *
  * insertListFromNestedData(categories, document.querySelector('#list'));
+ *
  */
-export function insertListFromNestedData(data, node) {
+module.export = function insertListFromNestedData(data, node) {
   const min = data.reduce((min, el) => {
     return el.left < min ? el.left : min;
   }, data[0].left);
@@ -66,7 +69,7 @@ export function insertListFromNestedData(data, node) {
   }, document.createElement('ul'));
 
   node.appendChild(rootUl);
-}
+};
 
 function findChildren({ left, right }, arr, container = []) {
   if (right - left <= 1) return container;

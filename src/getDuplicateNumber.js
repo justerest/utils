@@ -6,22 +6,21 @@
  * @param  {number[]} arr
  * @return {number}
  */
-export function getDuplicateNumber(arr) {
-  const arrCopy = arr.slice();
+module.exports = function getDuplicateNumber(arr) {
   let offset = 0;
 
-  while (arrCopy.length > 2) {
-    const midpoint = arrCopy.length / 2;
-    const middleEl = arrCopy[midpoint - 1];
+  while (arr.length > 2) {
+    const mid = arr.length / 2;
+    const midEl = arr[mid - 1];
 
-    if (middleEl < midpoint + offset) {
-      arrCopy.length = midpoint;
+    if (midEl < mid + offset) {
+      arr = arr.slice(0, mid);
     }
     else {
-      arrCopy.splice(0, midpoint);
-      offset = middleEl;
+      arr = arr.slice(mid, Infinity);
+      offset = midEl;
     }
   }
 
   return arr[arr.length / 2 - 1];
-}
+};
