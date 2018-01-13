@@ -10,7 +10,7 @@ const ARRAY = [];
 for (let i = 1; i < N; i++) ARRAY.push(i);
 ARRAY.splice(duplicate, 0, duplicate);
 
-test('find duplicate in array, length = ' + N, () => {
+test(`array.length = ${N}, x = ${duplicate}`, () => {
   expect(getDuplicateNumber(ARRAY)).toBe(duplicate);
   expect(ARRAY.length).toBe(N);
 });

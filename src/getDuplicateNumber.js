@@ -22,5 +22,5 @@ module.exports = function getDuplicateNumber(arr) {
     }
   }
 
-  return arr[arr.length / 2 - 1];
+  return arr[0];
 };
